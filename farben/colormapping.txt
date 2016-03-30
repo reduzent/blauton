@@ -1,0 +1,50 @@
+# Format
+# <pixel-nr> <kanal> <midi note>
+# Zeilen, die mit # beginnen, werden ignoriert
+#
+# In diesem Mapping werden die tiefsten Töne Blau
+# zugewiesen, die höchsten Rot.
+#
+# Auflösung Projektor
+displayresolution 640 360
+#
+# Vollbild 0=aus 1=ein
+fullscreen 0
+#
+# Ab hier Mapping-Tabelle
+0 b 38
+0 g 59
+0 r 79
+1 b 40
+1 g 61
+1 r 81
+2 b 42
+2 g 62
+2 r 83
+3 b 43
+3 g 64
+3 r 85
+4 b 45
+4 g 66
+4 r 86
+5 b 47
+5 g 67
+5 r 88
+6 b 49
+6 g 69
+6 r 90
+7 b 50
+7 g 71
+7 r 91
+8 b 52
+8 g 73
+8 r 93
+9 b 54
+9 g 74
+9 r 95
+10 b 55
+10 g 76
+10 r 97
+11 b 57
+11 g 78
+11 r 98
