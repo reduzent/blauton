@@ -1,9 +1,9 @@
 # Format
-# <pixel-nr> <kanal> <midi note>
-# Zeilen, die mit # beginnen, werden ignoriert
+# <pixel_nr> <kanal> <midi_note>
+# Zeilen die mit # beginnen werden ignoriert
 #
 # In diesem Mapping werden die tiefsten Töne Blau
-# zugewiesen, die höchsten Rot.
+# zugewiesen und die höchsten Rot.
 #
 # Auflösung Projektor
 displayresolution 640 360
