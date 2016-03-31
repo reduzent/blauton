@@ -4,12 +4,11 @@
 #X obj 10 15 declare -stdlib Gem -stdpath Gem -path include;
 #X obj 14 66 adc~ 1;
 #X obj 551 14 loadbang;
-#X obj 104 68 fileplayer;
-#X msg 551 36 \; pd dsp 1 \; outgain 50 \;;
+#X obj 99 69 fileplayer;
 #X obj 227 132 table detected_notes 128;
 #X obj 14 132 tone-analyzer detected_notes;
 #X text 194 132 -->;
-#N canvas 67 44 802 85 PREVIEW 1;
+#N canvas 67 44 802 85 PREVIEW 0;
 #X obj 10 10 subpix 0 b;
 #X obj 31 10 subpix 0 g;
 #X obj 51 10 subpix 0 r;
@@ -60,10 +59,14 @@
 #X obj 58 66 tgl 20 0 empty empty empty 17 7 0 10 -232576 -1 -1 0 1
 ;
 #X obj 16 292 gradient-display;
-#X connect 2 0 17 0;
-#X connect 3 0 5 0;
-#X connect 4 0 7 0;
-#X connect 7 0 10 0;
-#X connect 15 0 20 0;
-#X connect 17 0 7 0;
-#X connect 19 0 17 1;
+#X obj 97 107 dac~;
+#X msg 551 36 \; pd dsp 1 \; outgain 1 \;;
+#X connect 2 0 16 0;
+#X connect 3 0 21 0;
+#X connect 4 0 6 0;
+#X connect 4 0 20 0;
+#X connect 4 0 20 1;
+#X connect 6 0 9 0;
+#X connect 14 0 19 0;
+#X connect 16 0 6 0;
+#X connect 18 0 16 1;
