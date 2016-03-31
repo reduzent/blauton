@@ -1,0 +1,10 @@
+#N canvas 0 44 646 484 10;
+#X declare -stdlib Gem -stdpath Gem -path include;
+#X text 512 459 2016 \, Roman Haefeli;
+#X obj 10 15 declare -stdlib Gem -stdpath Gem -path include;
+#X obj 14 56 adc~ 1;
+#X obj 57 203 spect2color;
+#X obj 583 11 loadbang;
+#X msg 583 33 \; pd dsp 1;
+#X obj 62 56 fileplayer;
+#X connect 4 0 5 0;
