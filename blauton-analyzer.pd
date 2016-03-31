@@ -49,8 +49,10 @@
 #X obj 723 29 subpix 97 r;
 #X obj 788 29 subpix 98 r;
 #X restore 437 17 pd PREVIEW;
+#X obj 14 193 color-mapper detected_notes;
 #X connect 2 0 7 0;
 #X connect 3 0 5 0;
 #X connect 4 0 7 0;
 #X connect 7 0 9 0;
+#X connect 9 0 12 0;
 #X connect 9 1 10 0;
