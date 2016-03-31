@@ -57,6 +57,7 @@
 #X obj 90 122 r outgain;
 #X obj 20 206 outlet;
 #X text 77 206 bang after each completed analysis;
+#X connect 0 0 6 0;
 #X connect 1 0 8 0;
 #X connect 2 0 5 0;
 #X connect 4 0 2 0;
