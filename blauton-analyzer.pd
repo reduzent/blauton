@@ -79,6 +79,11 @@
 -1 8467 1;
 #X floatatom 396 368 4 0 0 0 - bgain -, f 4;
 #X text 349 217 == GAIN ==;
+#X obj 442 235 tgl 30 0 gradients gradients empty 17 7 0 10 -228856
+-1 -1 0 1;
+#X text 440 217 == GRADIENTS ==;
+#X text 476 236 <- gradients;
+#X text 494 250 or bars;
 #X connect 2 0 15 0;
 #X connect 3 0 20 0;
 #X connect 4 0 6 0;

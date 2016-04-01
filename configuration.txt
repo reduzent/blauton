@@ -12,6 +12,8 @@ autostart 1
 rgain 1.0
 ggain 1.0
 bgain 1.0
+# whether to render gradients (1) or bars (0)
+gradients 1
 #
 [ COLORMAPPING ]
 0 b 38
