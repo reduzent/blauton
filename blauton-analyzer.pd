@@ -70,15 +70,15 @@
 #X text 192 166 <- reload color mapping;
 #X text 119 332 <--;
 #X obj 351 237 vsl 20 128 0 1.5 0 0 rgain rgain R 5 20 0 16 -258113
--1 -1 6300 1;
+-1 -1 8467 1;
 #X floatatom 344 368 4 0 0 0 - rgain -, f 4;
 #X obj 371 237 vsl 20 128 0 1.5 0 0 ggain ggain G 5 20 0 16 -4034 -1
--1 9400 1;
+-1 8467 1;
 #X floatatom 370 368 4 0 0 0 - ggain -, f 4;
-#X obj 392 237 vsl 20 128 0 1.5 0 0 bgain bgain B 5 20 0 16 -4160 -1
--1 7000 1;
+#X obj 391 237 vsl 20 128 0 1.5 0 0 bgain bgain B 5 20 0 16 -4160 -1
+-1 8467 1;
 #X floatatom 396 368 4 0 0 0 - bgain -, f 4;
-#X text 349 216 === GAIN ===;
+#X text 349 217 == GAIN ==;
 #X connect 2 0 15 0;
 #X connect 3 0 20 0;
 #X connect 4 0 6 0;
