@@ -8,6 +8,10 @@ displayresolution 640 360
 fullscreen 0
 offset 0 0
 autostart 1
+# gain settings (per channel)
+rgain 1.0
+ggain 1.0
+bgain 1.0
 #
 [ COLORMAPPING ]
 0 b 38
