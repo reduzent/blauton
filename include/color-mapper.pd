@@ -23,8 +23,7 @@
 #X msg 77 98 list [ COLORMAPPING ];
 #X obj 62 147 f;
 #X obj 77 29 t b b;
-#X obj 150 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 135 7 inlet;
 #X connect 1 0 23 0;
 #X connect 2 0 8 0;
 #X connect 2 1 7 0;
