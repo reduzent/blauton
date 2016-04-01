@@ -1,6 +1,6 @@
-#N canvas 0 44 640 371 10;
+#N canvas 0 44 633 405 10;
 #X declare -stdlib Gem -stdpath Gem -path include;
-#X text 500 343 2016 \, Roman Haefeli;
+#X text 500 373 2016 \, Roman Haefeli;
 #X obj 10 15 declare -stdlib Gem -stdpath Gem -path include;
 #X obj 14 66 adc~ 1;
 #X obj 551 14 loadbang;
@@ -48,25 +48,35 @@
 #X restore 437 17 pd PREVIEW;
 #X obj 14 193 color-mapper detected_notes;
 #X text 102 48 load soundfile (wav or aiff):;
-#X obj 147 292 table r 12;
-#X obj 147 312 table g 12;
-#X obj 147 332 table b 12;
-#X obj 16 248 tgl 20 0 empty empty empty 17 7 0 10 -232576 -1 -1 1
-1;
-#X text 43 251 <- turn gradient rendering on/off;
+#X obj 147 332 table r 12;
+#X obj 147 352 table g 12;
+#X obj 147 372 table b 12;
+#X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 -232576
+-1 -1 0 1;
 #X obj 14 91 *~ 0;
 #X text 17 46 audio in;
 #X obj 58 66 tgl 20 0 empty empty empty 17 7 0 10 -232576 -1 -1 0 1
 ;
-#X obj 16 292 gradient-display;
+#X obj 16 332 gradient-display;
 #X obj 97 107 dac~;
 #X msg 551 36 \; pd dsp 1 \; outgain 1 \;;
-#X connect 2 0 16 0;
-#X connect 3 0 21 0;
+#X obj 109 298 bng 15 250 50 0 empty empty empty 17 7 0 10 -261682
+-1 -1;
+#X text 128 296 <- reload window configuration;
+#X text 43 241 <- turn gradient rendering on/off;
+#X text 63 258 Use ESCAPE key to exit from fullscreen mode!;
+#X obj 173 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -261682
+-1 -1;
+#X text 192 166 <- reload color mapping;
+#X text 119 332 <--;
+#X connect 2 0 15 0;
+#X connect 3 0 20 0;
 #X connect 4 0 6 0;
-#X connect 4 0 20 0;
-#X connect 4 0 20 1;
+#X connect 4 0 19 0;
+#X connect 4 0 19 1;
 #X connect 6 0 9 0;
-#X connect 14 0 19 0;
-#X connect 16 0 6 0;
-#X connect 18 0 16 1;
+#X connect 14 0 18 0;
+#X connect 15 0 6 0;
+#X connect 17 0 15 1;
+#X connect 21 0 18 1;
+#X connect 25 0 9 1;
