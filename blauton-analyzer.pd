@@ -64,7 +64,6 @@
 -1 -1;
 #X text 128 296 <- reload window configuration;
 #X text 43 241 <- turn gradient rendering on/off;
-#X text 63 258 Use ESCAPE key to exit from fullscreen mode!;
 #X obj 173 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -261682
 -1 -1;
 #X text 192 166 <- reload color mapping;
@@ -80,10 +79,11 @@
 #X floatatom 396 368 4 0 0 0 - bgain -, f 4;
 #X text 349 217 == GAIN ==;
 #X obj 442 235 tgl 30 0 gradients gradients empty 17 7 0 10 -228856
--1 -1 0 1;
+-1 -1 1 1;
 #X text 440 217 == GRADIENTS ==;
 #X text 476 236 <- gradients;
 #X text 494 250 or bars;
+#X text 63 258 Use 'q' key to exit from fullscreen mode!;
 #X connect 2 0 15 0;
 #X connect 3 0 20 0;
 #X connect 4 0 6 0;
@@ -94,4 +94,4 @@
 #X connect 15 0 6 0;
 #X connect 17 0 15 1;
 #X connect 21 0 18 1;
-#X connect 25 0 9 1;
+#X connect 24 0 9 1;
