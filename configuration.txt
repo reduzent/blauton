@@ -4,7 +4,7 @@
 # Zeilenreihenfolge spielt keine Rolle
 #
 [ CONFIG ]
-displayresolution 1920 1200
+displayresolution 640 360
 fullscreen 0
 offset 0 0
 autostart 1
