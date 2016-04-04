@@ -4,11 +4,15 @@
 # Zeilenreihenfolge spielt keine Rolle
 #
 [ CONFIG ]
-displayresolution 640 360
+displayresolution 1920 1200
 fullscreen 0
 offset 0 0
 autostart 1
-cursor 1
+cursor 0
+# Possible values for menubar: -1, 0, 1 (don't know if they work)
+menubar -1
+# display/hide window decoration
+border 0
 # gain settings (per channel)
 rgain 1.0
 ggain 1.0
