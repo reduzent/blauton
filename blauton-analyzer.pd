@@ -52,11 +52,11 @@
 #X obj 147 352 table g 12;
 #X obj 147 372 table b 12;
 #X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 -232576
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 14 91 *~ 0;
 #X text 17 46 audio in;
-#X obj 58 66 tgl 20 0 empty empty empty 17 7 0 10 -232576 -1 -1 0 1
-;
+#X obj 58 66 tgl 20 0 empty audioinput empty 17 7 0 10 -232576 -1 -1
+0 1;
 #X obj 16 332 gradient-display;
 #X obj 97 107 dac~;
 #X msg 551 36 \; pd dsp 1 \; outgain 1 \;;

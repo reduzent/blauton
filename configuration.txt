@@ -9,9 +9,7 @@ fullscreen 0
 offset 0 0
 autostart 1
 cursor 0
-# Possible values for menubar: -1, 0, 1 (don't know if they work)
 menubar -1
-# display/hide window decoration
 border 0
 # gain settings (per channel)
 rgain 1.0
@@ -19,6 +17,8 @@ ggain 1.0
 bgain 1.0
 # whether to render gradients (1) or bars (0)
 gradients 1
+# audio
+audioinput 0
 #
 [ COLORMAPPING ]
 0 r 38
