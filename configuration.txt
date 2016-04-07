@@ -10,13 +10,13 @@ offset 0 0
 autostart 1
 cursor 0
 menubar -1
-border 0
+border 1
 # gain settings (per channel)
 rgain 1.0
 ggain 1.0
 bgain 1.0
-# whether to render gradients (1) or bars (0)
-gradients 1
+# interpolation method: 0=none 1=bilinear 2=bicubic
+interpolation 0
 # audio
 audioinput 0
 #

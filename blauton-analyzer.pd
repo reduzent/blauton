@@ -3,7 +3,7 @@
 #X text 500 373 2016 \, Roman Haefeli;
 #X obj 10 15 declare -stdlib Gem -stdpath Gem -path include;
 #X obj 14 66 adc~ 1;
-#X obj 551 14 loadbang;
+#X obj 533 11 loadbang;
 #X obj 99 69 fileplayer;
 #X obj 227 132 table detected_notes 128;
 #X obj 14 132 tone-analyzer detected_notes;
@@ -52,14 +52,13 @@
 #X obj 147 352 table g 12;
 #X obj 147 372 table b 12;
 #X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 -232576
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 14 91 *~ 0;
 #X text 17 46 audio in;
 #X obj 58 66 tgl 20 0 empty audioinput empty 17 7 0 10 -232576 -1 -1
 0 1;
 #X obj 16 332 gradient-display;
 #X obj 97 107 dac~;
-#X msg 551 36 \; pd dsp 1 \; outgain 1 \;;
 #X obj 109 298 bng 15 250 50 0 empty empty empty 17 7 0 10 -261682
 -1 -1;
 #X text 128 296 <- reload window configuration;
@@ -78,14 +77,16 @@
 -1 8467 1;
 #X floatatom 396 368 4 0 0 0 - bgain -, f 4;
 #X text 349 217 == GAIN ==;
-#X obj 442 235 tgl 30 0 gradients gradients empty 17 7 0 10 -228856
--1 -1 1 1;
-#X text 440 217 == GRADIENTS ==;
-#X text 476 236 <- gradients;
-#X text 494 250 or bars;
 #X text 63 258 Use 'q' key to exit from fullscreen mode!;
+#X msg 533 33 \; pd dsp 1 \; outgain 0.82 \;;
+#X text 440 217 == INTERPOLATION ==;
+#X obj 441 248 vradio 24 1 0 3 interpolation interpolation empty 0
+-8 0 10 -228856 -1 -1 0;
+#X text 473 252 none;
+#X text 471 277 bilinear;
+#X text 472 303 bicubic;
 #X connect 2 0 15 0;
-#X connect 3 0 20 0;
+#X connect 3 0 34 0;
 #X connect 4 0 6 0;
 #X connect 4 0 19 0;
 #X connect 4 0 19 1;
@@ -93,5 +94,5 @@
 #X connect 14 0 18 0;
 #X connect 15 0 6 0;
 #X connect 17 0 15 1;
-#X connect 21 0 18 1;
-#X connect 24 0 9 1;
+#X connect 20 0 18 1;
+#X connect 23 0 9 1;
