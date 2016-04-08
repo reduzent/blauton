@@ -171,6 +171,7 @@ cursor menubar border;
 #X connect 5 0 22 0;
 #X connect 6 0 23 0;
 #X connect 7 0 24 0;
+#X connect 8 0 5 1;
 #X connect 9 0 6 1;
 #X connect 10 0 7 1;
 #X connect 11 0 12 0;
