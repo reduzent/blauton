@@ -81,11 +81,11 @@
 #X msg 533 33 \; pd dsp 1 \; outgain 0.82 \;;
 #X text 440 217 == INTERPOLATION ==;
 #X obj 441 248 vradio 24 1 0 3 interpolation interpolation empty 0
--8 0 10 -228856 -1 -1 0;
+-8 0 10 -228856 -1 -1 1;
 #X text 473 252 none;
 #X text 471 277 bilinear;
 #X text 472 303 bicubic;
-#N canvas 414 44 429 533 EQUALIZER 0;
+#N canvas 414 44 427 565 EQUALIZER 0;
 #X obj 14 11 eq-band 11;
 #X obj 14 473 eq-band 0;
 #X obj 14 431 eq-band 1;
@@ -98,6 +98,9 @@
 #X obj 14 137 eq-band 8;
 #X obj 14 95 eq-band 9;
 #X obj 14 53 eq-band 10;
+#X obj 14 536 bng 15 250 50 0 reset-equalizer empty empty 17 7 0 10
+-258113 -1 -1;
+#X text 35 535 reset;
 #X restore 445 129 pd EQUALIZER;
 #X connect 2 0 15 0;
 #X connect 3 0 34 0;
