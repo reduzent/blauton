@@ -81,7 +81,7 @@
 #X text 472 303 bicubic;
 #N canvas 414 44 427 565 EQUALIZER 0;
 #X obj 14 11 eq-band 11;
-#X obj 14 536 bng 15 250 50 0 equalizer-reset empty empty 17 7 0 10
+#X obj 194 536 bng 15 250 50 0 equalizer-reset empty empty 17 7 0 10
 -258113 -1 -1;
 #N canvas 701 233 504 376 eq_preset_saving 0;
 #X obj 77 91 text search config;
@@ -137,7 +137,7 @@
 #X connect 21 0 20 0;
 #X connect 22 0 23 0;
 #X restore 298 535 pd eq_preset_saving;
-#X text 33 536 reset to 1;
+#X text 213 536 reset to 1;
 #X obj 14 473 eq-band 0;
 #X obj 14 431 eq-band 1;
 #X obj 14 389 eq-band 2;
@@ -149,9 +149,9 @@
 #X obj 14 137 eq-band 8;
 #X obj 14 95 eq-band 9;
 #X obj 14 53 eq-band 10;
-#X obj 115 537 bng 15 250 50 0 save-config empty empty 17 7 0 10 -204786
+#X obj 14 536 bng 15 250 50 0 save-config empty empty 17 7 0 10 -204786
 -1 -1;
-#X text 135 536 save current settings;
+#X text 34 535 save current settings;
 #X restore 437 40 pd EQUALIZER;
 #N canvas 520 214 314 215 config 0;
 #X obj 37 13 loadbang;
