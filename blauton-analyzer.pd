@@ -1,11 +1,11 @@
-#N canvas -14 44 633 405 10;
+#N canvas 0 44 633 405 10;
 #X declare -stdlib Gem -stdpath Gem -path include;
 #X text 500 373 2016 \, Roman Haefeli;
 #X obj 10 15 declare -stdlib Gem -stdpath Gem -path include;
 #X obj 14 66 adc~ 1;
 #X obj 533 11 loadbang;
 #X obj 99 69 fileplayer;
-#X obj 227 132 table detected_notes 128;
+#X obj 228 132 table detected_notes 128;
 #X obj 14 132 tone-analyzer detected_notes;
 #X text 194 132 -->;
 #N canvas 67 44 802 85 PREVIEW 0;
