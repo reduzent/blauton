@@ -1,4 +1,4 @@
-#N canvas 0 44 633 405 10;
+#N canvas -14 44 633 405 10;
 #X declare -stdlib Gem -stdpath Gem -path include;
 #X text 500 373 2016 \, Roman Haefeli;
 #X obj 10 15 declare -stdlib Gem -stdpath Gem -path include;
@@ -52,7 +52,7 @@
 #X obj 147 352 table g 12;
 #X obj 147 372 table b 12;
 #X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 -232576
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 14 91 *~ 0;
 #X text 17 46 audio in;
 #X obj 58 66 tgl 20 0 empty audioinput empty 17 7 0 10 -232576 -1 -1
@@ -85,6 +85,20 @@
 #X text 473 252 none;
 #X text 471 277 bilinear;
 #X text 472 303 bicubic;
+#N canvas 414 44 429 533 EQUALIZER 0;
+#X obj 14 11 eq-band 11;
+#X obj 14 473 eq-band 0;
+#X obj 14 431 eq-band 1;
+#X obj 14 389 eq-band 2;
+#X obj 14 347 eq-band 3;
+#X obj 14 305 eq-band 4;
+#X obj 14 263 eq-band 5;
+#X obj 14 221 eq-band 6;
+#X obj 14 179 eq-band 7;
+#X obj 14 137 eq-band 8;
+#X obj 14 95 eq-band 9;
+#X obj 14 53 eq-band 10;
+#X restore 445 129 pd EQUALIZER;
 #X connect 2 0 15 0;
 #X connect 3 0 34 0;
 #X connect 4 0 6 0;
