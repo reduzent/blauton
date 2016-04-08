@@ -52,7 +52,7 @@
 #X obj 147 352 table g 12;
 #X obj 147 372 table b 12;
 #X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 -232576
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 14 91 *~ 0;
 #X text 17 46 audio in;
 #X obj 58 66 tgl 20 0 empty audioinput empty 17 7 0 10 -232576 -1 -1
@@ -81,20 +81,9 @@
 #X text 472 303 bicubic;
 #N canvas 414 44 427 565 EQUALIZER 1;
 #X obj 14 11 eq-band 11;
-#X obj 14 473 eq-band 0;
-#X obj 14 431 eq-band 1;
-#X obj 14 389 eq-band 2;
-#X obj 14 347 eq-band 3;
-#X obj 14 305 eq-band 4;
-#X obj 14 263 eq-band 5;
-#X obj 14 221 eq-band 6;
-#X obj 14 179 eq-band 7;
-#X obj 14 137 eq-band 8;
-#X obj 14 95 eq-band 9;
-#X obj 14 53 eq-band 10;
-#X obj 14 536 bng 15 250 50 0 reset-equalizer empty empty 17 7 0 10
+#X obj 14 536 bng 15 250 50 0 equalizer-reset empty empty 17 7 0 10
 -258113 -1 -1;
-#N canvas 304 94 315 379 eq_preset_saving 0;
+#N canvas 701 233 504 376 eq_preset_saving 1;
 #X obj 77 91 text search config;
 #X msg 77 68 list [ EQUALIZER ];
 #X obj 26 161 text get config;
@@ -111,6 +100,14 @@
 #X msg 134 274 \; \$1 \$2;
 #X obj 134 253 list;
 #X obj 26 17 r config-ready;
+#X obj 281 28 r write-config;
+#X obj 308 94 text search config;
+#X obj 281 50 t a a;
+#X msg 308 71 symbol \$1;
+#X msg 346 143 1;
+#X obj 346 122 loadbang;
+#X msg 281 134 \$2;
+#X obj 281 183 text set config;
 #X connect 0 0 9 1;
 #X connect 1 0 0 0;
 #X connect 2 0 7 0;
@@ -131,21 +128,47 @@
 #X connect 12 0 3 1;
 #X connect 14 0 13 0;
 #X connect 15 0 10 0;
+#X connect 16 0 18 0;
+#X connect 17 0 23 1;
+#X connect 18 0 22 0;
+#X connect 18 1 19 0;
+#X connect 19 0 17 0;
+#X connect 20 0 23 2;
+#X connect 21 0 20 0;
+#X connect 22 0 23 0;
 #X restore 298 535 pd eq_preset_saving;
 #X text 33 536 reset to 1;
+#X obj 14 473 eq-band 0;
+#X obj 14 431 eq-band 1;
+#X obj 14 389 eq-band 2;
+#X obj 14 347 eq-band 3;
+#X obj 14 305 eq-band 4;
+#X obj 14 263 eq-band 5;
+#X obj 14 221 eq-band 6;
+#X obj 14 179 eq-band 7;
+#X obj 14 137 eq-band 8;
+#X obj 14 95 eq-band 9;
+#X obj 14 53 eq-band 10;
+#X obj 115 537 bng 15 250 50 0 save-config empty empty 17 7 0 10 -204786
+-1 -1;
+#X text 135 536 save current settings;
 #X restore 437 40 pd EQUALIZER;
 #N canvas 520 214 314 215 config 0;
 #X obj 37 13 loadbang;
 #X obj 37 43 t b b;
-#X obj 37 159 s config-ready;
-#X obj 64 89 text define config;
+#X obj 37 184 s config-ready;
+#X obj 64 159 text define config;
 #X msg 64 66 read -c configuration.txt;
 #X obj 91 13 r reload-config;
+#X msg 118 132 write -c configuration.txt;
+#X obj 118 105 r save-config;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 4 0;
 #X connect 4 0 3 0;
 #X connect 5 0 1 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
 #X restore 305 15 pd config;
 #X obj 333 69 bng 24 250 50 0 reload-config empty empty 17 7 0 10 -261682
 -1 -1;
