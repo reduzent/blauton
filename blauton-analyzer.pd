@@ -59,13 +59,7 @@
 0 1;
 #X obj 16 332 gradient-display;
 #X obj 97 107 dac~;
-#X obj 109 298 bng 15 250 50 0 empty empty empty 17 7 0 10 -261682
--1 -1;
-#X text 128 296 <- reload window configuration;
 #X text 43 241 <- turn gradient rendering on/off;
-#X obj 173 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -261682
--1 -1;
-#X text 192 166 <- reload color mapping;
 #X text 119 332 <--;
 #X obj 351 237 vsl 20 128 0 1.5 0 0 rgain rgain R 5 20 0 16 -258113
 -1 -1 8467 1;
@@ -100,11 +94,10 @@
 #X obj 14 53 eq-band 10;
 #X obj 14 536 bng 15 250 50 0 reset-equalizer empty empty 17 7 0 10
 -258113 -1 -1;
-#X text 35 535 reset;
 #N canvas 304 94 315 379 eq_preset_saving 0;
 #X obj 77 91 text search config;
 #X msg 77 68 list [ EQUALIZER ];
-#X obj 26 161 text get colormapping;
+#X obj 26 161 text get config;
 #X obj 26 112 until;
 #X obj 26 137 f;
 #X obj 53 137 + 1;
@@ -139,7 +132,8 @@
 #X connect 14 0 13 0;
 #X connect 15 0 10 0;
 #X restore 298 535 pd eq_preset_saving;
-#X restore 445 129 pd EQUALIZER;
+#X text 33 536 reset to 1;
+#X restore 437 40 pd EQUALIZER;
 #N canvas 520 214 314 215 config 0;
 #X obj 37 13 loadbang;
 #X obj 37 43 t b b;
@@ -153,8 +147,11 @@
 #X connect 4 0 3 0;
 #X connect 5 0 1 0;
 #X restore 305 15 pd config;
+#X obj 333 69 bng 24 250 50 0 reload-config empty empty 17 7 0 10 -261682
+-1 -1;
+#X text 367 74 <- reload configuration;
 #X connect 2 0 15 0;
-#X connect 3 0 34 0;
+#X connect 3 0 30 0;
 #X connect 4 0 6 0;
 #X connect 4 0 19 0;
 #X connect 4 0 19 1;
@@ -162,5 +159,3 @@
 #X connect 14 0 18 0;
 #X connect 15 0 6 0;
 #X connect 17 0 15 1;
-#X connect 20 0 18 1;
-#X connect 23 0 9 1;
