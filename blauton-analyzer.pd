@@ -1,6 +1,6 @@
-#N canvas 0 44 633 405 10;
+#N canvas 0 44 627 563 10;
 #X declare -stdlib Gem -stdpath Gem -path include;
-#X text 500 373 2016 \, Roman Haefeli;
+#X text 496 534 2016 \, Roman Haefeli;
 #X obj 10 15 declare -stdlib Gem -stdpath Gem -path include;
 #X obj 14 66 adc~ 1;
 #X obj 533 11 loadbang;
@@ -52,7 +52,7 @@
 #X obj 147 352 table g 12;
 #X obj 147 372 table b 12;
 #X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 -232576
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 14 91 *~ 0;
 #X text 17 46 audio in;
 #X obj 58 66 tgl 20 0 empty audioinput empty 17 7 0 10 -232576 -1 -1
@@ -79,7 +79,7 @@
 #X text 473 252 none;
 #X text 471 277 bilinear;
 #X text 472 303 bicubic;
-#N canvas 414 44 427 565 EQUALIZER 0;
+#N canvas 414 44 427 565 EQUALIZER 1;
 #X obj 14 11 eq-band 11;
 #X obj 194 536 bng 15 250 50 0 equalizer-reset empty empty 17 7 0 10
 -258113 -1 -1;
@@ -138,6 +138,9 @@
 #X connect 22 0 23 0;
 #X restore 298 535 pd eq_preset_saving;
 #X text 213 536 reset to 1;
+#X obj 14 536 bng 15 250 50 0 save-config empty empty 17 7 0 10 -204786
+-1 -1;
+#X text 34 535 save current settings;
 #X obj 14 473 eq-band 0;
 #X obj 14 431 eq-band 1;
 #X obj 14 389 eq-band 2;
@@ -149,9 +152,6 @@
 #X obj 14 137 eq-band 8;
 #X obj 14 95 eq-band 9;
 #X obj 14 53 eq-band 10;
-#X obj 14 536 bng 15 250 50 0 save-config empty empty 17 7 0 10 -204786
--1 -1;
-#X text 34 535 save current settings;
 #X restore 437 40 pd EQUALIZER;
 #N canvas 520 214 314 215 config 0;
 #X obj 37 13 loadbang;
@@ -173,6 +173,24 @@
 #X obj 333 69 bng 24 250 50 0 reload-config empty empty 17 7 0 10 -261682
 -1 -1;
 #X text 367 74 <- reload configuration;
+#X obj 10 409 cnv 15 200 100 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array r.outlevel 12 float 2;
+#X coords 0 1 12 0 200 100 1 0 0;
+#X restore 10 409 graph;
+#X obj 210 409 cnv 15 200 100 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array g.outlevel 12 float 2;
+#X coords 0 1 12 0 200 100 1 0 0;
+#X restore 210 409 graph;
+#X obj 410 409 cnv 15 200 100 empty empty empty 20 12 0 14 -203904
+-66577 0;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array b.outlevel 12 float 2;
+#X coords 0 1 12 0 200 100 1 0 0;
+#X restore 410 409 graph;
 #X connect 2 0 15 0;
 #X connect 3 0 30 0;
 #X connect 4 0 6 0;
