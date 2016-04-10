@@ -79,7 +79,7 @@
 #X text 473 252 none;
 #X text 471 277 bilinear;
 #X text 472 303 bicubic;
-#N canvas 414 44 427 565 EQUALIZER 1;
+#N canvas 414 44 427 565 EQUALIZER 0;
 #X obj 14 11 eq-band 11;
 #X obj 194 536 bng 15 250 50 0 equalizer-reset empty empty 17 7 0 10
 -258113 -1 -1;
