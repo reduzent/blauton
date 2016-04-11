@@ -52,7 +52,7 @@
 #X obj 147 352 table g 12;
 #X obj 147 372 table b 12;
 #X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 -232576
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 14 91 *~ 0;
 #X text 17 46 audio in;
 #X obj 58 66 tgl 20 0 empty audioinput empty 17 7 0 10 -232576 -1 -1
@@ -61,14 +61,14 @@
 #X obj 97 107 dac~;
 #X text 43 241 <- turn gradient rendering on/off;
 #X text 119 332 <--;
-#X obj 351 237 vsl 20 128 0 1.5 0 0 rgain rgain R 5 20 0 16 -258113
--1 -1 8467 1;
+#X obj 351 237 vsl 20 128 0.1 10 1 0 rgain rgain R 5 20 0 16 -258113
+-1 -1 5900 1;
 #X floatatom 344 368 4 0 0 0 - rgain -, f 4;
-#X obj 371 237 vsl 20 128 0 1.5 0 0 ggain ggain G 5 20 0 16 -4034 -1
--1 8467 1;
+#X obj 371 237 vsl 20 128 0.1 10 1 0 ggain ggain G 5 20 0 16 -4034
+-1 -1 6067 1;
 #X floatatom 370 368 4 0 0 0 - ggain -, f 4;
-#X obj 391 237 vsl 20 128 0 1.5 0 0 bgain bgain B 5 20 0 16 -4160 -1
--1 8467 1;
+#X obj 391 237 vsl 20 128 0.1 10 1 0 bgain bgain B 5 20 0 16 -4160
+-1 -1 6167 1;
 #X floatatom 396 368 4 0 0 0 - bgain -, f 4;
 #X text 349 217 == GAIN ==;
 #X text 63 258 Use 'q' key to exit from fullscreen mode!;
