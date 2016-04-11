@@ -12,9 +12,9 @@ cursor 0
 menubar -1
 border 1
 # gain settings (per channel)
-rgain 1
-ggain 1
-bgain 1
+rgain 0.132
+ggain 0.132
+bgain 0.132
 # curve used for scaling
 curve -1
 # interpolation method: 0=none 1=bilinear 2=bicubic
@@ -23,42 +23,42 @@ interpolation 0
 audioinput 0
 #
 [ COLORMAPPING ]
-0 r 50
+0 b 50
 0 g 71
-0 b 91
-1 r 52
+0 r 91
+1 b 52
 1 g 73
-1 b 93
-2 r 54
+1 r 93
+2 b 54
 2 g 74
-2 b 95
-3 r 55
+2 r 95
+3 b 55
 3 g 76
-3 b 97
-4 r 57
+3 r 97
+4 b 57
 4 g 78
-4 b 98
-5 r 59
+4 r 98
+5 b 59
 5 g 79
-5 b 100
-6 r 61
+5 r 100
+6 b 61
 6 g 81
-6 b 102
-7 r 62
+6 r 102
+7 b 62
 7 g 83
-7 b 103
+7 r 103
 8 r 64
 8 g 85
-8 b 105
-9 r 66
+8 r 105
+9 b 66
 9 g 86
-9 b 107
-10 r 67
+9 r 107
+10 b 67
 10 g 88
-10 b 109
-11 r 69
+10 r 109
+11 b 69
 11 g 90
-11 b 110
+11 r 110
 [ EQUALIZER ]
 0-r 1
 0-g 1
