@@ -12,11 +12,11 @@ cursor 0
 menubar -1
 border 1
 # gain settings (per channel)
-rgain 0.132
-ggain 0.132
-bgain 0.132
+rgain 1
+ggain 1
+bgain 1
 # curve used for scaling
-curve -1
+curve -0.5
 # interpolation method: 0=none 1=bilinear 2=bicubic
 interpolation 0
 # audio
