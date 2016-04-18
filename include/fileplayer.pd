@@ -44,8 +44,8 @@
 ;
 #X obj 33 21 cnv 11 199 11 empty empty empty 4 7 0 10 -233017 -66577
 0;
-#X obj 20 20 bng 12 250 50 0 \$0.button \$0.button.r /home/roman/projekte/blauton/blauton_20160410_def_video_44kH.wav
-20 7 0 10 -261234 -1 -1;
+#X obj 20 20 bng 12 250 50 0 \$0.button \$0.button.r empty 20 7 0 10
+-261234 -1 -1;
 #X obj 81 113 samplerate~;
 #X obj 32 104 *;
 #X obj 81 86 loadbang;
@@ -59,10 +59,11 @@
 -1 -1 0 1;
 #X obj 298 131 int;
 #X obj 32 32 nbx 5 12 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 230 256;
+-262144 -1 -1 851 256;
 #X text 85 31 startpos;
 #X obj 102 155 t b a;
 #X obj 102 177 del 500;
+#X msg 265 355 label empty;
 #X connect 0 0 13 0;
 #X connect 1 0 5 0;
 #X connect 3 0 1 0;
@@ -117,4 +118,5 @@
 #X connect 56 0 57 0;
 #X connect 56 1 47 1;
 #X connect 57 0 21 0;
+#X connect 58 0 31 0;
 #X coords 0 -1 1 1 213 24 2 20 20;
