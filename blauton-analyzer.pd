@@ -191,10 +191,10 @@
 #X coords 0 1 12 0 200 100 1 0 0;
 #X restore 410 409 graph;
 #X obj 441 355 tgl 24 0 err-corr err-corr empty 17 7 0 10 -232576 -1
--1 0 1;
+-1 1 1;
 #X text 472 352 error correction;
 #X msg 533 33 \; pd dsp 1 \; outgain 36 \; err-corr 1 \;;
-#X floatatom 577 368 5 0 16 0 - - consider-window, f 5;
+#X floatatom 577 368 5 1 16 0 - - consider-window, f 5;
 #X text 471 367 take max of last;
 #X connect 2 0 15 0;
 #X connect 3 0 47 0;
