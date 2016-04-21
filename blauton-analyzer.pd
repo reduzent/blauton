@@ -61,23 +61,23 @@
 #X obj 97 107 dac~;
 #X text 43 241 <- turn gradient rendering on/off;
 #X text 119 332 <--;
-#X obj 351 237 vsl 20 128 0.1 10 1 0 rgain rgain R 5 20 0 16 -258113
--1 -1 6350 1;
-#X floatatom 344 368 4 0 0 0 - rgain -, f 4;
-#X obj 371 237 vsl 20 128 0.1 10 1 0 ggain ggain G 5 20 0 16 -4034
--1 -1 6350 1;
-#X floatatom 370 368 4 0 0 0 - ggain -, f 4;
-#X obj 391 237 vsl 20 128 0.1 10 1 0 bgain bgain B 5 20 0 16 -4160
--1 -1 6350 1;
-#X floatatom 396 368 4 0 0 0 - bgain -, f 4;
-#X text 349 217 == GAIN ==;
+#X obj 351 187 vsl 20 128 0.1 10 1 0 rgain rgain R 5 20 0 16 -258113
+-1 -1 5650 1;
+#X floatatom 344 318 4 0 0 0 - rgain -, f 4;
+#X obj 371 187 vsl 20 128 0.1 10 1 0 ggain ggain G 5 20 0 16 -4034
+-1 -1 5650 1;
+#X floatatom 370 318 4 0 0 0 - ggain -, f 4;
+#X obj 391 187 vsl 20 128 0.1 10 1 0 bgain bgain B 5 20 0 16 -4160
+-1 -1 5650 1;
+#X floatatom 396 318 4 0 0 0 - bgain -, f 4;
+#X text 349 167 == GAIN ==;
 #X text 63 258 Use 'q' key to exit from fullscreen mode!;
-#X text 440 217 == INTERPOLATION ==;
-#X obj 441 248 vradio 24 1 0 3 interpolation interpolation empty 0
--8 0 10 -228856 -1 -1 0;
-#X text 473 252 none;
-#X text 471 277 bilinear;
-#X text 472 303 bicubic;
+#X text 440 167 == INTERPOLATION ==;
+#X obj 441 198 vradio 24 1 0 3 interpolation interpolation empty 0
+-8 0 10 -228856 -1 -1 1;
+#X text 473 202 none;
+#X text 471 227 bilinear;
+#X text 474 253 bicubic;
 #N canvas 414 44 427 565 EQUALIZER 0;
 #X obj 14 11 eq-band 11;
 #X obj 194 536 bng 15 250 50 0 equalizer-reset empty empty 17 7 0 10
@@ -190,13 +190,19 @@
 #X array b.outlevel 12 float 2;
 #X coords 0 1 12 0 200 100 1 0 0;
 #X restore 410 409 graph;
-#X obj 441 355 tgl 24 0 err-corr err-corr empty 17 7 0 10 -232576 -1
--1 1 1;
-#X text 472 360 error correction;
+#X obj 439 308 tgl 24 0 filter filter empty 17 7 0 10 -232576 -1 -1
+1 1;
 #X msg 533 33 \; pd dsp 1 \; outgain 36 \; err-corr 1 \;;
-#X text 473 377 eliminate_dark_singles;
+#X text 488 343 take max of last;
+#X text 440 287 == FILTER ==;
+#X text 472 312 enable/disable;
+#X obj 439 343 nbx 2 14 1 30 0 0 maxoflast maxoflast empty 0 -8 0 10
+-232576 -1 -1 6 256;
+#X obj 439 363 nbx 2 14 1 30 0 0 lowpass lowpass empty 0 -8 0 10 -232576
+-1 -1 23 256;
+#X text 488 364 low pass filter;
 #X connect 2 0 15 0;
-#X connect 3 0 47 0;
+#X connect 3 0 46 0;
 #X connect 4 0 6 0;
 #X connect 4 0 19 0;
 #X connect 4 0 19 1;
