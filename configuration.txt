@@ -21,7 +21,10 @@ curve -0.5
 interpolation 0
 # audio
 audioinput 0
-#
+# filter settings
+filter 1
+maxoflast 6
+lowpass 18
 [ COLORMAPPING ]
 0 b 50
 0 g 71
