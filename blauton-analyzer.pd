@@ -190,14 +190,14 @@
 #X array b.outlevel 12 float 2;
 #X coords 0 1 12 0 200 100 1 0 0;
 #X restore 410 409 graph;
-#X obj 439 308 tgl 24 0 err-corr err-corr empty 17 7 0 10 -232576 -1
--1 0 1;
+#X obj 439 308 tgl 24 0 filter filter empty 17 7 0 10 -232576 -1 -1
+1 1;
 #X msg 533 33 \; pd dsp 1 \; outgain 36 \; err-corr 1 \;;
 #X text 488 343 take max of last;
 #X text 440 287 == FILTER ==;
 #X text 472 312 enable/disable;
 #X obj 439 343 nbx 4 14 1 30 0 0 maxoflast maxoflast empty 0 -8 0 10
--232576 -1 -1 4 256;
+-232576 -1 -1 6 256;
 #X obj 439 363 nbx 4 14 1 10 0 0 lowpass lowpass empty 0 -8 0 10 -232576
 -1 -1 1.91 256;
 #X text 488 364 low pass filter;
