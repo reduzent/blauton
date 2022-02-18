@@ -5,26 +5,26 @@
 #
 [ CONFIG ]
 displayresolution 640 360
-fullscreen 0
+fullscreen 1
 offset 0 0
 autostart 1
 cursor 0
 menubar -1
 border 1
 # gain settings (per channel)
-rgain 1
-ggain 1
-bgain 1
+rgain 0.285
+ggain 0.255
+bgain 0.255
 # curve used for scaling
 curve -0.5
 # interpolation method: 0=none 1=bilinear 2=bicubic
-interpolation 0
+interpolation 2
 # audio
-audioinput 0
+audioinput 1
 # filter settings
 filter 1
-maxoflast 6
-lowpass 18
+maxoflast 4
+lowpass 19
 [ COLORMAPPING ]
 0 b 50
 0 g 71
@@ -63,39 +63,39 @@ lowpass 18
 11 g 90
 11 r 110
 [ EQUALIZER ]
-0-r 1
-0-g 1
-0-b 1
-1-r 1
-1-g 1
-1-b 1
-2-r 1
-2-g 1
-2-b 1
-3-r 1
-3-g 1
-3-b 1
-4-r 1
-4-g 1
-4-b 1
-5-r 1
-5-g 1
-5-b 1
-6-r 1
-6-g 1
-6-b 1
-7-r 1
-7-g 1
-7-b 1
-8-r 1
-8-g 1
-8-b 1
-9-r 1
-9-g 1
-9-b 1
-10-r 1
-10-g 1
-10-b 1
-11-r 1
-11-g 1
-11-b 1
+0-r 0.931543
+0-g 0.931543
+0-b 0.999968
+1-r 0.965149
+1-g 0.948198
+1-b 0.999968
+2-r 0.965149
+2-g 0.948198
+2-b 1.01785
+3-r 0.999968
+3-g 0.965149
+3-b 1.01785
+4-r 1.01785
+4-g 0.965149
+4-b 1.01785
+5-r 1.01785
+5-g 0.965149
+5-b 1.03604
+6-r 1.03604
+6-g 0.982404
+6-b 1.03604
+7-r 1.01785
+7-g 0.982404
+7-b 1.03604
+8-r 1.05456
+8-g 0.999968
+8-b 1.03604
+9-r 1.07342
+9-g 0.999968
+9-b 1.03604
+10-r 1.09261
+10-g 1.01785
+10-b 1.07342
+11-r 1.09261
+11-g 1.01785
+11-b 1.05456
