@@ -3,6 +3,12 @@
 #extension GL_ARB_texture_rectangle : enable
 uniform sampler2DRect texture;
 
+float rand(float n)
+{
+    return fract(sin(n) * 43758.5453123);
+}
+
+
 void main (void)
 {
 	vec2 coordinate = (gl_TextureMatrix[0] * gl_TexCoord[0]).st-vec2(0.5,0.5);
@@ -86,5 +92,12 @@ void main (void)
 	color += a32 * interpol3.x * interpol2.y;
 	color += a33 * interpol3.x * interpol3.y;
 
-	gl_FragColor = color;
+        vec4 dithertex = vec4(
+            rand(coordinate.x * coordinate.y * 345.4) / 128.0,
+            rand(coordinate.y * coordinate.x * 178.2319) / 128.0,
+            rand(coordinate.x * coordinate.y * 982.239) / 128.0,
+            0
+        );
+
+	gl_FragColor = color + dithertex ;
 }
