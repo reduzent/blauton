@@ -191,7 +191,6 @@
 #X restore 410 409 graph;
 #X obj 439 308 tgl 24 0 filter filter empty 17 7 0 10 #e0c4fc #000000
 #000000 0 1;
-#X msg 533 33 \; pd dsp 1 \; outgain 36 \; err-corr 1 \;;
 #X text 488 343 take max of last;
 #X text 440 287 == FILTER ==;
 #X text 472 312 enable/disable;
@@ -201,8 +200,9 @@
 #000000 #000000 0 256;
 #X text 488 364 low pass filter;
 #X obj 10 15 declare -lib Gem -path Gem -path include;
+#X msg 533 33 \; pd dsp 1 \; outgain 36 \;;
 #X connect 1 0 14 0;
-#X connect 2 0 45 0;
+#X connect 2 0 52 0;
 #X connect 3 0 5 0;
 #X connect 3 0 18 0;
 #X connect 3 0 18 1;
