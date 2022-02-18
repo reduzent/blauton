@@ -1,7 +1,6 @@
 #N canvas 0 44 627 563 10;
-#X declare -stdlib Gem -stdpath Gem -path include;
+#X declare -lib Gem -path Gem -path include;
 #X text 496 534 2016 \, Roman Haefeli;
-#X obj 10 15 declare -stdlib Gem -stdpath Gem -path include;
 #X obj 14 66 adc~ 1;
 #X obj 533 11 loadbang;
 #X obj 99 69 fileplayer;
@@ -51,37 +50,37 @@
 #X obj 147 332 table r 12;
 #X obj 147 352 table g 12;
 #X obj 147 372 table b 12;
-#X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 -232576
--1 -1 1 1;
+#X obj 16 238 tgl 20 0 empty gemwin.switch empty 17 7 0 10 #e0c4fc
+#000000 #000000 0 1;
 #X obj 14 91 *~ 0;
 #X text 17 46 audio in;
-#X obj 58 66 tgl 20 0 empty audioinput empty 17 7 0 10 -232576 -1 -1
-0 1;
+#X obj 58 66 tgl 20 0 empty audioinput empty 17 7 0 10 #e0c4fc #000000
+#000000 0 1;
 #X obj 16 332 gradient-display;
 #X obj 97 107 dac~;
 #X text 43 241 <- turn gradient rendering on/off;
 #X text 119 332 <--;
-#X obj 351 187 vsl 20 128 0.1 10 1 0 rgain rgain R 5 20 0 16 -258113
--1 -1 5650 1;
-#X floatatom 344 318 4 0 0 0 - rgain -, f 4;
-#X obj 371 187 vsl 20 128 0.1 10 1 0 ggain ggain G 5 20 0 16 -4034
--1 -1 5650 1;
-#X floatatom 370 318 4 0 0 0 - ggain -, f 4;
-#X obj 391 187 vsl 20 128 0.1 10 1 0 bgain bgain B 5 20 0 16 -4160
--1 -1 5650 1;
-#X floatatom 396 318 4 0 0 0 - bgain -, f 4;
+#X obj 351 187 vsl 20 128 0.1 10 1 0 rgain rgain R 5 20 0 16 #fc0400
+#000000 #000000 0 1;
+#X floatatom 344 318 4 0 0 0 - rgain - 0;
+#X obj 371 187 vsl 20 128 0.1 10 1 0 ggain ggain G 5 20 0 16 #00fc04
+#000000 #000000 0 1;
+#X floatatom 370 318 4 0 0 0 - ggain - 0;
+#X obj 391 187 vsl 20 128 0.1 10 1 0 bgain bgain B 5 20 0 16 #0400fc
+#000000 #000000 0 1;
+#X floatatom 396 318 4 0 0 0 - bgain - 0;
 #X text 349 167 == GAIN ==;
 #X text 63 258 Use 'q' key to exit from fullscreen mode!;
 #X text 440 167 == INTERPOLATION ==;
 #X obj 441 198 vradio 24 1 0 3 interpolation interpolation empty 0
--8 0 10 -228856 -1 -1 1;
+-8 0 10 #dcdcdc #000000 #000000 0;
 #X text 473 202 none;
 #X text 471 227 bilinear;
 #X text 474 253 bicubic;
 #N canvas 414 44 427 565 EQUALIZER 0;
 #X obj 14 11 eq-band 11;
 #X obj 194 536 bng 15 250 50 0 equalizer-reset empty empty 17 7 0 10
--258113 -1 -1;
+#fc0400 #000000 #000000;
 #N canvas 701 233 504 376 eq_preset_saving 0;
 #X obj 77 91 text search config;
 #X msg 77 68 list [ EQUALIZER ];
@@ -137,8 +136,8 @@
 #X connect 22 0 23 0;
 #X restore 298 535 pd eq_preset_saving;
 #X text 213 536 reset to 1;
-#X obj 14 536 bng 15 250 50 0 save-config empty empty 17 7 0 10 -204786
--1 -1;
+#X obj 14 536 bng 15 250 50 0 save-config empty empty 17 7 0 10 #c4fcc4
+#000000 #000000;
 #X text 34 535 save current settings;
 #X obj 14 473 eq-band 0;
 #X obj 14 431 eq-band 1;
@@ -170,43 +169,44 @@
 #X connect 7 0 6 0;
 #X restore 305 15 pd config;
 #X obj 398 131 bng 24 250 50 0 reload-config empty empty 17 7 0 10
--261682 -1 -1;
+#fce0c4 #000000 #000000;
 #X text 432 136 <- reload configuration;
-#X obj 10 409 cnv 15 200 100 empty empty empty 20 12 0 14 -261234 -66577
+#X obj 10 409 cnv 15 200 100 empty empty empty 20 12 0 14 #fcc4c4 #404040
 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array r.outlevel 12 float 2;
 #X coords 0 1 12 0 200 100 1 0 0;
 #X restore 10 409 graph;
-#X obj 210 409 cnv 15 200 100 empty empty empty 20 12 0 14 -204786
--66577 0;
+#X obj 210 409 cnv 15 200 100 empty empty empty 20 12 0 14 #c4fcc4
+#404040 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array g.outlevel 12 float 2;
 #X coords 0 1 12 0 200 100 1 0 0;
 #X restore 210 409 graph;
-#X obj 410 409 cnv 15 200 100 empty empty empty 20 12 0 14 -203904
--66577 0;
+#X obj 410 409 cnv 15 200 100 empty empty empty 20 12 0 14 #c4c4fc
+#404040 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array b.outlevel 12 float 2;
 #X coords 0 1 12 0 200 100 1 0 0;
 #X restore 410 409 graph;
-#X obj 439 308 tgl 24 0 filter filter empty 17 7 0 10 -232576 -1 -1
-1 1;
+#X obj 439 308 tgl 24 0 filter filter empty 17 7 0 10 #e0c4fc #000000
+#000000 0 1;
 #X msg 533 33 \; pd dsp 1 \; outgain 36 \; err-corr 1 \;;
 #X text 488 343 take max of last;
 #X text 440 287 == FILTER ==;
 #X text 472 312 enable/disable;
 #X obj 439 343 nbx 2 14 1 30 0 0 maxoflast maxoflast empty 0 -8 0 10
--232576 -1 -1 6 256;
-#X obj 439 363 nbx 2 14 1 30 0 0 lowpass lowpass empty 0 -8 0 10 -232576
--1 -1 23 256;
+#e0c4fc #000000 #000000 0 256;
+#X obj 439 363 nbx 2 14 1 30 0 0 lowpass lowpass empty 0 -8 0 10 #e0c4fc
+#000000 #000000 0 256;
 #X text 488 364 low pass filter;
-#X connect 2 0 15 0;
-#X connect 3 0 46 0;
-#X connect 4 0 6 0;
-#X connect 4 0 19 0;
-#X connect 4 0 19 1;
-#X connect 6 0 9 0;
-#X connect 14 0 18 0;
-#X connect 15 0 6 0;
-#X connect 17 0 15 1;
+#X obj 10 15 declare -lib Gem -path Gem -path include;
+#X connect 1 0 14 0;
+#X connect 2 0 45 0;
+#X connect 3 0 5 0;
+#X connect 3 0 18 0;
+#X connect 3 0 18 1;
+#X connect 5 0 8 0;
+#X connect 13 0 17 0;
+#X connect 14 0 5 0;
+#X connect 16 0 14 1;
